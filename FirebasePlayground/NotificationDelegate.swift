@@ -12,7 +12,7 @@ class NotificationDelegate {
     
     func didReceiveNotification(title: String, body: String) {
         let nObjc = NotificationObject(body: body, title: title)
-        NotificationCenter.default.post(name: NSNotification.Name("Cachorro"), object: nObjc)
+        NotificationCenter.default.post(name: NSNotification.Name("FBNotification"), object: nObjc)
     }
 }
 

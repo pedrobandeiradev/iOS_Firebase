@@ -15,12 +15,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector (didReceiveNotificationObject(n:)), name: NSNotification.Name(rawValue: "Cachorro"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector (didReceiveNotificationObject(n:)), name: NSNotification.Name(rawValue: "FBNotification"), object: nil)
     }
 
-    
     @objc func didReceiveNotificationObject(n: NSNotification) {
-        
         let uNObject = n.object as? NotificationObject
         lbMainTitle.text = uNObject?.title
         lbBody.text = uNObject?.body
